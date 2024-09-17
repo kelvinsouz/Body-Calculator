@@ -1,12 +1,16 @@
-def validinput(prompt,num1,num2):
+def validinput(prompt, num1, num2):
     try:
         while True:
-            valor = float(input(prompt).replace(",", "."))
-            print(f"O valor deve estar situado entre {num1} e {num2}.")
+
+            print(prompt)
+            valor = float(input(f"O valor deve estar situado entre {num1} e {num2}: ").replace(",", "."))
+
             if valor >= num1 and valor <= num2:
                 return valor
                 break
             else:
-                print(f"Por favor, digite um número entre {num1} e {num2}")
+                print(f"\nNúmero inválido, digite um número entre {num1} e {num2}\n")
+
     except ValueError:
-        print("Entrada inválido. Por favor, insira um número válido.")
+        print("Entrada inválida. Por favor, insira um número válido.")
+        quit()
