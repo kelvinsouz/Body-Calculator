@@ -14,3 +14,12 @@ def validinput(prompt, num1, num2):
     except ValueError:
         print("Entrada inválida. Por favor, insira um número válido.")
         quit()
+
+def gencheck():
+    while True:
+        x = input("Digite (H) para homem, ou (M) para mulher: ").upper()
+        if x == "M" or x == "H":
+            return x
+            break
+        else:
+            print("Entrada inválida. Você deve digitar a letra H ou M.")
