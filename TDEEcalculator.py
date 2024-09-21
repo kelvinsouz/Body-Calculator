@@ -1,6 +1,6 @@
 from validinput import validinput, gencheck
 
-def tdeecalcM(peso, altura, idade, atividade, genero):
+def tdeecalc(peso, altura, idade, atividade, genero):
 
     alturacm = altura * 100
     if genero == "H":
@@ -21,18 +21,18 @@ def tdeecalcM(peso, altura, idade, atividade, genero):
     return tdee
 
 def main():
-    print("Bem vindo ao programa de cálculo de TMB(Taxa metabólica Basal)")
+    print("\nBem vindo ao programa de cálculo de TMB(Taxa metabólica Basal)")
     print("Você é um homem ou uma mulher?")
     genero = gencheck()
-    peso = validinput("Informe o seu peso em quilos: ", 30, 300)
-    altura = validinput("Informe sua altura em metros: ", 1.30, 2.50)
-    idade = validinput("Informe a sua idade: ", 18, 90)
-    print("Por fim, selecione o número que corresponde ao seu estilo de vida: ")
+    peso = validinput("\nInforme o seu peso em quilos: ", 30, 300)
+    altura = validinput("\nInforme sua altura em metros: ", 1.30, 2.50)
+    idade = validinput("\nInforme a sua idade: ", 18, 90)
+    print("\nPor fim, selecione o número que corresponde ao seu estilo de vida: ")
     print("(1) Sedentário (Trabalho de escritório)")
     print("(2) Atividade física leve (1-2 vezes por semana)")
     print("(3) Atividade física moderada (3-5 vezes por semana)")
-    print("(4) Atividade física intensa (6-7 vezes por semana\n")
+    print("(4) Atividade física intensa (6-7 vezes por semana")
     atividade = validinput("Informe sua frequência de atividades físicas: ", 1, 4)
-    tmb = tdeecalcM(peso, altura, idade, atividade, genero)
-    print(f"{tmb:.2f}")
+    tmb = tdeecalc(peso, altura, idade, atividade, genero)
+    print(f"\nA sua Taxa Metabólica Basal é: {tmb:.2f} kcal/dia.")
 

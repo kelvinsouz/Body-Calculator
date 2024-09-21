@@ -23,9 +23,9 @@ def bmiclassification(bmi):
         print("Obesidade III")
 
 def main():
-    print("Bem vindo ao programa de Cálculo de IMC!")
+    print("\nBem vindo ao programa de Cálculo de IMC!")
     peso = validinput("Informe o seu peso em quilos.", 30, 300)
-    altura = validinput("Agora, informe sua altura", 1.30, 2.50)
+    altura = validinput("\nAgora, informe sua altura", 1.30, 2.50)
     imc = calcbmi(peso, altura)
     print("\nSeu IMC é de {:.2f}.".format(imc))
     classificacao = bmiclassification(imc)
