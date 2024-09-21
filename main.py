@@ -1,7 +1,15 @@
-from validinput import validinput
-from BMIcalculator import calcbmi
+from BMIcalculator import main as bmi_main
 
-print("Bem vindo ao programa de Cálculo de IMC!")
-peso = validinput("Informe o seu peso em quilos.", 30, 300)
-altura = validinput("Agora, informe sua altura", 1.30, 2.50)
-print(calcbmi(peso, altura))
+def main():
+    print("Escolha uma opção")
+    print("1. Calculadora de IMC")
+
+    escolha = input("Digite o número da opção escolhida: ")
+
+    if escolha == '1':
+        bmi_main()
+    else:
+        print("Opção inválida. Tente novamente")
+
+if __name__ == "__main__":
+    main()
